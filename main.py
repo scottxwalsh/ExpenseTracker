@@ -1,22 +1,3 @@
-while True:
-    print("\nExpense Tracker")
-    print("1. Add Expense")
-    print("2. View Expenses")
-    print("3. Exit")
-    choice = input("Enter your choice: ")
-
-    if choice == "1":
-        # Add Expense
-        add_expense(expenses)
-    elif choice == "2":
-        # View Expenses
-        view_expenses(expenses)
-    elif choice == "3":
-        print("Exiting the program")
-        break
-    else:
-        print("Invalid choice. Please try again.")
-
 def add_expense(expenses):
     amount = float(input("Enter amount: "))
     category = input("Enter category: ")
@@ -29,4 +10,26 @@ def view_expenses(expenses):
     for expense in expenses:
         print(f"{expense['date']} - {expense['category']} - {expense['description']} - {expense['amount']}")
 
-expenses = []
+def main():
+    expenses = []
+    while True:
+        print("\nExpense Tracker")
+        print("1. Add Expense")
+        print("2. View Expenses")
+        print("3. Exit")
+        choice = input("Enter your choice: ")
+
+        if choice == "1":
+            # Add Expense
+            add_expense(expenses)
+        elif choice == "2":
+            # View Expenses
+            view_expenses(expenses)
+        elif choice == "3":
+            print("Exiting the program")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
