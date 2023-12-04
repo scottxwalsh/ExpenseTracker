@@ -7,10 +7,10 @@ while True:
 
     if choice == "1":
         # Add Expense
-        pass
+        add_expense(expenses)
     elif choice == "2":
         # View Expenses
-        pass
+        view_expenses(expenses)
     elif choice == "3":
         print("Exiting the program")
         break
