@@ -1,14 +1,14 @@
 def add_expense(expenses):
     amount = float(input("Enter amount: "))
     category = input("Enter category: ")
-    description = input("Enter description")
+    description = input("Enter description: ")
     date = input("Enter date (YYYY-MM-DD): ")
     expense = {'amount': amount, 'category': category, 'description': description, 'date': date}
     expenses.append(expense)
 
 def view_expenses(expenses):
     for expense in expenses:
-        print(f"{expense['date']} - {expense['category']} - {expense['description']} - {expense['amount']}")
+        print(f"{expense['date']} - {expense['category']} - {expense['description']} - ${expense['amount']:.2f}")
 
 def main():
     expenses = []
