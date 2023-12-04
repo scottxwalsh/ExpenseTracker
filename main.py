@@ -7,7 +7,10 @@ def add_expense(expenses):
     expenses.append(expense)
 
 def view_expenses(expenses):
-    for expense in expenses:
+    # Sorting the expenses by date
+    sorted_expenses = sorted(expenses, key=lambda x: x['date'])
+
+    for expense in sorted_expenses:
         print(f"{expense['date']} - {expense['category']} - {expense['description']} - ${expense['amount']:.2f}")
 
 def main():
